@@ -1,6 +1,6 @@
-# ApiWay.js
+# apiway-sdk-js
 
-ApiWay.js provides a minimal higher-level wrapper around ApiWay's API.
+apiway-sdk-js provides a minimal higher-level wrapper around ApiWay's API.
 
 ## Usage
 
