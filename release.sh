@@ -25,7 +25,7 @@ mkdir out
 
 # build the docs
 npm run make-docs
-VERSION=`ls docs/apiway.js`
+VERSION=`ls docs/apiway-sdk-js.js`
 
 # switch to gh-pages and add the docs
 mv docs/apiway-sdk-js/* out/
