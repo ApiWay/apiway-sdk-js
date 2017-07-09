@@ -52,6 +52,8 @@ clayreimann.listStarredRepos(function(err, repos) {
 
 ## API Documentation
 
+https://apiway.github.io/apiway-sdk-js/
+
 
 ## Installation
 ApiWay.js is available from `npm` or [unpkg][unpkg].
