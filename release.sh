@@ -28,7 +28,7 @@ npm run make-docs
 VERSION=`ls docs/apiway.js`
 
 # switch to gh-pages and add the docs
-mv docs/apiway.js/* out/
+mv docs/apiway-sdk-js/* out/
 rm -rf docs/
 
 git checkout gh-pages

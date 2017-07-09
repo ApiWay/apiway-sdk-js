@@ -1,6 +1,6 @@
 {
   "name": "apiway-sdk-js",
-  "version": "0.0.39",
+  "version": "0.0.40",
   "license": "MIT",
   "description": "ApiWay API.",
   "main": "dist/components/ApiWay.js",
@@ -14,7 +14,7 @@
     "test-verbose": "DEBUG=apiway* npm test",
     "lint": "gulp lint",
     "make-docs": "node_modules/.bin/jsdoc -c .jsdoc.json --verbose",
-    "release": "./release.sh 0.0.39",
+    "release": "./release.sh 0.0.40",
     "codecov": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "babel": {
