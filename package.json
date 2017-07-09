@@ -15,7 +15,7 @@
     "lint": "gulp lint",
     "make-docs": "node_modules/.bin/jsdoc -c .jsdoc.json --verbose",
     "release": "./release.sh 0.0.40",
-    "codecov": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
+    "codecov": "nyc report --reportertext-lcov > coverage.lcov && codecov"
   },
   "babel": {
     "presets": [
