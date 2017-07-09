@@ -1,7 +1,0 @@
-docs/
-coverage/
-node_modules/
-lib/
-.nyc_output/
-.DS_Store
-sauce.json

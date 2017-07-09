@@ -1,9 +1,0 @@
----
-   extends: ../.eslintrc.yaml
-   plugins:
-      - mocha
-   env:
-      mocha: true
-   rules:
-      handle-callback-err: off
-      mocha/no-exclusive-tests: 2
