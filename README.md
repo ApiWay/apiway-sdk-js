@@ -10,44 +10,16 @@ ApiWay.js provides a minimal higher-level wrapper around ApiWay's API.
    or using a new promise-based API. The promise-based API returns the raw Axios
    request promise.
  */
-import ApiWay from 'apiway-api';
+var ApiWay = require('apiway-sdk-js');
 
-// unauthenticated client
 const aw = new ApiWay();
-let user = gh.User(); // not a gist yet
-user.updateProfile({
-   }
-}).then(function({data}) {
-   // Promises!
-   let createdGist = data;
-   return gist.read();
-}).then(function({data}) {
-   let retrievedGist = data;
-   // do interesting things
-});
-```
-
-```javascript
-var ApiWay = require('apiway-api');
-
-// basic auth
-var gh = new ApiWay({
-   username: 'FOO',
-   password: 'NotFoo'
-   /* also acceptable:
-      token: 'MY_OAUTH_TOKEN'
-    */
-});
-
-var me = gh.getUser(); // no user specified defaults to the user for whom credentials were provided
-me.listNotifications(function(err, notifications) {
-   // do some stuff
-});
-
-var clayreimann = gh.getUser('clayreimann');
-clayreimann.listStarredRepos(function(err, repos) {
-   // look at all the starred repos!
-});
+let project = aw.Project(); 
+let projectId = 'xxxxx'
+project.getProject( projectId)
+    .then(project => {
+      // Promise !
+      // Do something
+      })
 ```
 
 ## API Documentation
