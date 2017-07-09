@@ -16,6 +16,7 @@ npm run build
 # bump the version
 echo "npm version $1"
 npm version $1 --allow-same-version
+npm publish
 git push
 git push --tags
 
@@ -27,13 +28,14 @@ mkdir out
 npm run make-docs
 VERSION=`ls docs/apiway-sdk-js`
 
-# switch to gh-pages and add the docs
-mv docs/apiway-sdk-js/* out/
-rm -rf docs/
-
-git checkout gh-pages
-mv out/* docs/
 echo $VERSION >> _data/versions.csv
-git add .
-git commit -m "adding docs for v$VERSION"
-git push
+mv docs/apiway-sdk-js/$VERSION/* out/
+rm -rf docs/
+mv out docs
+
+#git checkout gh-pages
+#mv out/* docs/
+#echo $VERSION >> _data/versions.csv
+#git add .
+#git commit -m "adding docs for v$VERSION"
+#git push

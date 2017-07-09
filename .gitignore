@@ -81,4 +81,4 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
-package.json
+package-lock.json
