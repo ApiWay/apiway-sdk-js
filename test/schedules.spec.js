@@ -51,11 +51,33 @@ describe('Schedule', function() {
 
    it('get all schedules', function(done) {
       getSchedules().then((schedules) => {
-         console.log(schedules)
+         // console.log(schedules)
          expect(schedules).to.be.an.array();
          expect(schedules.length).to.be.above(0)
          done()
       })
+   });
+
+   it('start a schedule', function(done) {
+      awSchedule.addSchedule(SINGLE_OPTION)
+        .then((response) => {
+           awSchedule.start(response.data.data._id)
+              .then(res => {
+                 expect(res.data).to.have.own('responseStatus')
+                 expect(res.data.data.state).to.equal('active')
+                 awSchedule.stop(res.data.data._id)
+                    .then(res => {
+                       expect(res.data).to.have.own('responseStatus')
+                       expect(res.data.data.state).to.equal('inactive')
+                       awSchedule.deleteSchedule(res.data.data._id)
+                          .then(res => {
+                             expect(res.data).to.have.own('responseStatus')
+                             expect(res.data.responseStatus).to.equal("SUCCESS")
+                             done()
+                          })
+                    })
+              })
+         })
    });
 
    // it('delete a schedule', function(done) {
