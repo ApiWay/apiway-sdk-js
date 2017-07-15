@@ -1,6 +1,6 @@
 {
   "name": "apiway-sdk-js",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "description": "ApiWay API.",
   "main": "dist/components/ApiWay.js",
