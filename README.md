@@ -1,4 +1,5 @@
 # apiway-sdk-js
+[![npm version](https://badge.fury.io/js/apiway-sdk-js.svg)](https://badge.fury.io/js/apiway-sdk-js)
 
 apiway-sdk-js provides a minimal higher-level wrapper around ApiWay's API.
 
